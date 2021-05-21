@@ -1,0 +1,15 @@
+{
+  "animals": [
+    {
+      "type": "dog",
+      "name": "Spike",
+      "breed": "mutt",
+      "leash_color": "red"
+    },
+    {
+      "type": "cat",
+      "name": "Fluffy",
+      "favorite_toy": "spider ring"
+    }
+  ]
+}
