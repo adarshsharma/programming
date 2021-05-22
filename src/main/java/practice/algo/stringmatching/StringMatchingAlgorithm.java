@@ -1,8 +1,6 @@
 package practice.algo.stringmatching;
 
 
-import org.apache.commons.lang3.StringUtils;
-
 /**
  * Created by adarsh.sharma on 13/11/17.
  */
@@ -137,6 +135,5 @@ public class StringMatchingAlgorithm {
 //        System.out.println(KMPMatcher(test, pattern));
 //        matchWithAtMostOneMismatch(test, pattern);
         Integer[] res = StringMatchingAlgorithm.computePrefixFunction("AABAACAABAA");
-        System.out.println(StringUtils.join(res));
     }
 }

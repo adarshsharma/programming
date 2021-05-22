@@ -2,7 +2,6 @@ package design.undoredo.lib;
 
 
 import design.undoredo.lib.operation.Operation;
-
 import java.util.Stack;
 
 /**

@@ -1,7 +1,5 @@
 package practice.algo.stringmatching;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -10,6 +8,7 @@ import java.util.List;
  * Created by adarsh.sharma on 16/12/17.
  */
 public class KMP {
+
     public Collection<Integer> getMatches(String s, String pattern) {
         List<Integer> matches = new ArrayList<>();
         if (s == null || pattern == null || s.length() < pattern.length()) {
@@ -17,7 +16,6 @@ public class KMP {
         }
 
         Integer[] lps = computePrefixFunction(pattern);
-        System.out.println(StringUtils.join(lps, ','));
 
         int length = s.length();
         int k = 0;
@@ -31,7 +29,7 @@ public class KMP {
 
             if (k == pattern.length()) {
                 matches.add(i - k + 1);
-                k = lps[k-1];
+                k = lps[k - 1];
             }
         }
 
@@ -62,7 +60,7 @@ public class KMP {
     public static void main(String[] args) {
         String s = "ABABDABACDABABCABAB";
         String p = "ABABCABAB";
-        System.out.println(StringUtils.join(new KMP().getMatches(s, p), ','));
+        System.out.println(new KMP().getMatches(s, p));
 
     }
 }

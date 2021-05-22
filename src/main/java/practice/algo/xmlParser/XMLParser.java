@@ -1,7 +1,5 @@
 package practice.algo.xmlParser;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.io.*;
 import java.util.*;
 
@@ -34,10 +32,10 @@ public class XMLParser {
             }
             Node other = (Node) obj;
 
-            if (!StringUtils.equals(tag, other.tag)) {
+            if (!Objects.equals(tag, other.tag)) {
                 return false;
             }
-            if (!StringUtils.equals(text, other.text)) {
+            if (!Objects.equals(text, other.text)) {
                 return false;
             }
 

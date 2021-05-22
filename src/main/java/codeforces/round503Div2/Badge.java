@@ -1,6 +1,10 @@
 package codeforces.round503Div2;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
 
 /**
  * Created by adarsh.sharma on 11/08/18.
