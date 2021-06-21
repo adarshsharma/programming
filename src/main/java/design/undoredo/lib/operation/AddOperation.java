@@ -6,7 +6,7 @@ import design.undoredo.lib.TextAction;
  * Created by adarsh.sharma on 14/03/15.
  */
 public class AddOperation implements Operation {
-    private AddOperationData operationData;
+    private final AddOperationData operationData;
 
     public AddOperation(int position, String textToAdd) {
         if (textToAdd == null || position < 0) {

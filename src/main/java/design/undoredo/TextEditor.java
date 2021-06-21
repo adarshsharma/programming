@@ -12,6 +12,7 @@ import design.undoredo.lib.operation.Operation;
  * Created by adarsh.sharma on 14/03/15.
  */
 public class TextEditor implements TextAction {
+
     private String text;
     private UndoRedo undoRedo;
 
@@ -48,7 +49,7 @@ public class TextEditor implements TextAction {
         undoRedo.redo();
     }
 
-    public void addText(int position, String textToAdd, boolean callUndoRedo) {
+    private void addText(int position, String textToAdd, boolean callUndoRedo) {
         if (callUndoRedo) {
             Operation operation = new AddOperation(position, textToAdd);
             undoRedo.addOperation(operation);
@@ -57,18 +58,20 @@ public class TextEditor implements TextAction {
         System.out.println("text: " + text);
     }
 
-    public void removeText(int position, int length, boolean callUndoRedo) {
+    private void removeText(int position, int length, boolean callUndoRedo) {
         if (callUndoRedo) {
-            Operation operation = new DeleteOperation(position, text.substring(position, position + length));
+            Operation operation = new DeleteOperation(position,
+                text.substring(position, position + length));
             undoRedo.addOperation(operation);
         }
         text = new StringBuilder(text).delete(position, position + length).toString();
         System.out.println("text: " + text);
     }
 
-    public void replaceFirst(String originalText, String newText, boolean callUndoRedo) {
+    private void replaceFirst(String originalText, String newText, boolean callUndoRedo) {
         if (callUndoRedo) {
-            Operation operation = new FindAndReplaceOperation(text.indexOf(originalText), originalText, newText);
+            Operation operation = new FindAndReplaceOperation(text.indexOf(originalText),
+                originalText, newText);
             undoRedo.addOperation(operation);
         }
         text = text.replaceFirst(originalText, newText);

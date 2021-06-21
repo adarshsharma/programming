@@ -6,7 +6,7 @@ import design.undoredo.lib.TextAction;
  * Created by adarsh.sharma on 15/03/15.
  */
 public class DeleteOperation implements Operation {
-    private DeleteOperationData operationData;
+    private final DeleteOperationData operationData;
 
     public DeleteOperation(int position, String removedText) {
         if (position < 0 || removedText == null || removedText.length() < 1) {

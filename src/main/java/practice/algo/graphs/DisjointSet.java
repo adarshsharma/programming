@@ -7,9 +7,11 @@ import java.util.Map;
  * Created by adarsh.sharma on 15/07/18.
  */
 public class DisjointSet {
+
     Map<Integer, Node> mp = new HashMap<>();
 
-    class Node {
+    static class Node {
+
         int value;
         int rank;
         Node parent;
@@ -47,38 +49,14 @@ public class DisjointSet {
         Node parent1 = findSet(node1);
         Node parent2 = findSet(node2);
 
-        if (parent1.value == parent2.value) {
-            return;
-        }
-
-        if(parent1.rank >= parent2.rank) {
-            parent1.rank = (parent1.rank == parent2.rank)? parent1.rank + 1: parent1.rank;
-            parent2.parent = parent1;
-        } else {
-            parent1.parent = parent2;
+        if (parent1.value != parent2.value) {
+            if (parent1.rank >= parent2.rank) {
+                parent1.rank = (parent1.rank == parent2.rank) ? parent1.rank + 1 : parent1.rank;
+                parent2.parent = parent1;
+            } else {
+                parent1.parent = parent2;
+            }
         }
     }
 
-//    int[] roots;
-//
-//    public DisjointSet(int n) {
-//        this.roots = new int[n];
-//        for (int i = 0; i < n; i++) {
-//            this.roots[i] = i;
-//        }
-//    }
-//
-//    public void union(int value1, int value2) {
-//        if(roots[value1] != roots[value2]) {
-//            roots[findSet(value2)] = value1;
-//        }
-//    }
-//
-//    public int findSet(int value) {
-//        while(value != roots[value]) {
-//            roots[value] = roots[roots[value]];
-//            value = roots[value];
-//        }
-//        return value;
-//    }
 }

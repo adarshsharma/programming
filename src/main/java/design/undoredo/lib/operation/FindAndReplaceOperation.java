@@ -6,7 +6,7 @@ import design.undoredo.lib.TextAction;
  * Created by adarsh.sharma on 30/05/18.
  */
 public class FindAndReplaceOperation implements Operation {
-    private FindAndReplaceOperationData operationData;
+    private final FindAndReplaceOperationData operationData;
 
     public FindAndReplaceOperation(Integer position, String originalText, String newText) {
         this.operationData = new FindAndReplaceOperationData(position, originalText, newText);
