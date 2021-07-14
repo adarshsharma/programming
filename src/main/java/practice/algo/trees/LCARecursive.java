@@ -1,21 +1,11 @@
 package practice.algo.trees;
 
+import common.TreeNode;
+
 /**
  * Created by adarsh.sharma on 09/07/18.
  */
 public class LCARecursive {
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-            left = null;
-            right = null;
-        }
-    }
-
 
     public int lca(TreeNode A, int B, int C) {
         if (A == null) {

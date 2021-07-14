@@ -1,5 +1,6 @@
 package practice.algo.trees;
 
+import common.TreeNode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -15,18 +16,6 @@ public class LCAEulerTour {
     private Map<Integer, Integer> oldToNewMapping;
     private Map<Integer, Integer> firstOcc;
     private SparseTable sparseTable;
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-            left = null;
-            right = null;
-        }
-    }
 
     public class SparseTable {
         int[] logTable;

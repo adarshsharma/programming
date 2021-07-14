@@ -1,5 +1,6 @@
 package leetcode;
 
+import common.TreeNode;
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -9,16 +10,6 @@ import java.util.List;
  * Created by adarsh.sharma on 28/07/18.
  */
 public class SerializeAndDeserializeBinaryTree {
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
 
     public String serialize(TreeNode root) {

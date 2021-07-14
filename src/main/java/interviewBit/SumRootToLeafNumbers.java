@@ -1,5 +1,6 @@
 package interviewBit;
 
+import common.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,18 +9,6 @@ import java.util.List;
  */
 public class SumRootToLeafNumbers {
     long mod = 1003L;
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-            left = null;
-            right = null;
-        }
-    }
 
     class Pair {
         List<Long> key;

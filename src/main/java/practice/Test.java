@@ -1,5 +1,6 @@
 package practice;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -121,6 +122,17 @@ public class Test {
     }
 
     public static void main(String[] args) {
+        List<Integer> l1 = new ArrayList<>();
+        List<List<Integer>> ll1 = new ArrayList<>();
+        l1.add(1);
+        l1.add(2);
+        ll1.add(new ArrayList<>(l1));
+        System.out.println(ll1);
+        l1.set(1, 3);
+        ll1.add(new ArrayList<>(l1));
+        System.out.println(ll1);
+
+
         // int[] nums = {2, 5, 5, 5, 5, 5, 5, 7};
         // System.out.println(getFirstOccurance(nums, 0, 7, 5));
         // System.out.println(solve(1));
@@ -134,12 +146,15 @@ public class Test {
         // int[] test = {3, 5, 6, 7};
         // System.out.println(Arrays.binarySearch(test, 2));
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("ab");
-        System.out.println(sb.toString());
-        sb.append("cd");
-        System.out.println(sb.toString());
-        System.out.println(sb.length() );
+        // StringBuilder sb = new StringBuilder();
+        // sb.append("ab");
+        // System.out.println(sb.toString());
+        // sb.append("cd");
+        // System.out.println(sb.toString());
+        // System.out.println(sb.length() );
+
+        // String st = "content://a/b/c/213";
+        // System.out.println(st.substring(st.lastIndexOf("/")+1));
     }
 
 }

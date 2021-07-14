@@ -1,7 +1,5 @@
 package leetcode.contest.weekly243;
 
-import java.util.*;
-
 public class Problem1 {
 
     public boolean isSumEqual(String firstWord, String secondWord, String targetWord) {
@@ -10,7 +8,7 @@ public class Problem1 {
 
     private Long getVal(String s) {
         StringBuilder sb = new StringBuilder();
-        for(int i=0;i<s.length();i++) {
+        for (int i = 0; i < s.length(); i++) {
             sb.append(s.charAt(i) - 'a');
         }
 
