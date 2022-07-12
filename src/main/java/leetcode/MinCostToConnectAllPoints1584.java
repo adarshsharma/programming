@@ -38,7 +38,6 @@ public class MinCostToConnectAllPoints1584 {
                 return node;
             }
             node.parent = findSet(node.parent);
-            ;
             return node.parent;
         }
 
