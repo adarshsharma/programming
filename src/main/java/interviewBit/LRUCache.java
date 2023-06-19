@@ -27,7 +27,6 @@ public class LRUCache {
     public LRUCache(int capacity) {
         this.c = capacity;
         map = new HashMap<>();
-        ArrayList<Integer> arr = new ArrayList<>();
     }
 
     public int get(int key) {
