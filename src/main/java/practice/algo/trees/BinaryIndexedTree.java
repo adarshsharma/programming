@@ -1,5 +1,8 @@
 package practice.algo.trees;
 
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 /**
  * Created by adarsh.sharma on 13/06/18.
  */
@@ -37,6 +40,7 @@ public class BinaryIndexedTree {
     public static void main(String[] args) {
         int[] input = {1, 7, 3, 0, 7, 8, 3, 2, 6, 2, 1, 1, 4, 5};
         BinaryIndexedTree bit = new BinaryIndexedTree(input);
+        System.out.println(IntStream.of(bit.bit_arr).boxed().collect(Collectors.toList()));
         System.out.println(bit.sum(13));
         System.out.println(bit.sum(5));
         System.out.println(bit.sum(4));
